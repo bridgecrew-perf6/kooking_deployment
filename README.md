@@ -43,13 +43,13 @@ Install docker-compose in AWS EC2
 Test certificate
 
 ```bash
-  docker compose run --rm  certbot certonly --webroot --webroot-path /var/www/certbot/ --dry-run -d api.kooking.app
+  docker-compose run --rm  certbot certonly --webroot --webroot-path /var/www/certbot/ --dry-run -d api.kooking.app
 ```
 
 Create certificate (just remove the flag --dry-run)
 
 ```bash
-  docker compose run --rm  certbot certonly --webroot --webroot-path /var/www/certbot/ -d api.kooking.app
+  docker-compose run --rm  certbot certonly --webroot --webroot-path /var/www/certbot/ -d api.kooking.app
 ```
 
 ## Authors
