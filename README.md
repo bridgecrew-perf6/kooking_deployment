@@ -7,7 +7,7 @@ Repo qui contient les directives docker pour le serveur proxy nginx et la produc
 - [@ouabbas](https://www.github.com/ouabbas)
 
 
-## Install Git
+## Installation
 
 Install git in AWS EC2
 
@@ -42,3 +42,16 @@ Install docker-compose in AWS EC2
   docker-compose -v
 ```
 
+## Some commands
+
+Test certificate
+
+```bash
+  docker compose run --rm  certbot certonly --webroot --webroot-path /var/www/certbot/ --dry-run -d server.newbrands.fr
+```
+
+Create certificate (just remove the flag --fry-run)
+
+```bash
+  docker compose run --rm  certbot certonly --webroot --webroot-path /var/www/certbot/ -d server.newbrands.fr
+```
