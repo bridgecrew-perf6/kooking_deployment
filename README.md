@@ -2,10 +2,6 @@
 # Newbrands deployment
 
 Repo qui contient les directives docker pour le serveur proxy nginx et la production de certificats
-## Authors
-
-- [@ouabbas](https://www.github.com/ouabbas)
-
 
 ## Installation
 
@@ -55,3 +51,7 @@ Create certificate (just remove the flag --dry-run)
 ```bash
   docker compose run --rm  certbot certonly --webroot --webroot-path /var/www/certbot/ -d server.newbrands.fr
 ```
+
+## Authors
+
+- [@ouabbas](https://www.github.com/ouabbas)
