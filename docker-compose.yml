@@ -5,5 +5,14 @@ services:
     image: nginx:latest
     volumes:
       - ./data/nginx/:/etc/nginx/conf.d/:ro
+      - ./data/certbot/www/:/var/www/certbot/:ro
+      - ./data/certbot/conf/:/etc/letsencrypt/:ro
     network_mode: "host"    
     restart: always
+  certbot:
+    image: certbot/certbot:latest
+    volumes:
+      - ./data/certbot/conf/:/etc/letsencrypt/:rw
+      - ./data/certbot/www/:/var/www/certbot/:rw
+    depends_on:
+      - nginx

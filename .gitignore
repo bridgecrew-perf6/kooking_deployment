@@ -1,0 +1,4 @@
+# certbot files
+
+data/certbot/www/*
+data/certbot/conf/*
