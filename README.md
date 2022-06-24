@@ -50,7 +50,7 @@ Test certificate
   docker compose run --rm  certbot certonly --webroot --webroot-path /var/www/certbot/ --dry-run -d server.newbrands.fr
 ```
 
-Create certificate (just remove the flag --fry-run)
+Create certificate (just remove the flag --dry-run)
 
 ```bash
   docker compose run --rm  certbot certonly --webroot --webroot-path /var/www/certbot/ -d server.newbrands.fr
